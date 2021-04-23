@@ -8,6 +8,8 @@ case $- in
       *) return;;
 esac
 
+#export TERM=screen-256color
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -94,6 +96,14 @@ alias l='ls -CF'
 alias emacs='emacs -nw'
 alias open='xdg-open'
 
+#git aliases
+alias gst='git status'
+alias gcs='git commit -s'
+alias ga='git add'
+
+#find
+alias cppfind="find . -type f | grep -e '\.cp\?p\?$\|\.hp\?p\?$' | xargs grep -e"
+alias cpptags="find . -type f | grep -e '\.cp\?p\?$\|\.hp\?p\?$' | etags -"
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -120,6 +130,6 @@ fi
 
 export PATH=~/.local/bin:$PATH
 
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
 fi
