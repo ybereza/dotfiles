@@ -100,6 +100,9 @@ alias open='xdg-open'
 alias gst='git status'
 alias gcs='git commit -s'
 alias ga='git add'
+alias gb='git branch'
+alias gcb='git checkout -b'
+alias gc='git checkout'
 
 #find
 alias cppfind="find . -type f | grep -e '\.cp\?p\?$\|\.hp\?p\?$' | xargs grep -e"
