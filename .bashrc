@@ -93,7 +93,9 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias emacs='emacs -nw'
+# type tic -x -o ~/.terminfo terminfo-custom.src to add true color in terminal
+# details: https://www.gnu.org/software/emacs/manual/html_node/efaq/Colors-on-a-TTY.html
+alias emacs='TERM=xterm-emacs emacs -nw'
 alias open='xdg-open'
 
 #git aliases
