@@ -95,7 +95,7 @@ alias la='ls -A'
 alias l='ls -CF'
 # type tic -x -o ~/.terminfo terminfo-custom.src to add true color in terminal
 # details: https://www.gnu.org/software/emacs/manual/html_node/efaq/Colors-on-a-TTY.html
-alias emacs='TERM=xterm-emacs emacs -nw'
+alias e='TERM=xterm-emacs emacs -nw'
 alias open='xdg-open'
 
 #git aliases
@@ -133,8 +133,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=~/.local/bin:$PATH
+export PATH=~/.local/bin:/opt/go/bin:$PATH
 
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
-fi
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
