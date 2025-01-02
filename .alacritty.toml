@@ -4,3 +4,9 @@ startup_mode = "Maximized"
 
 [font]
 size = 14
+
+[keyboard]
+bindings = [
+  { key = "N", mods = "Control|Shift", action = "CreateNewWindow" }
+]
+
