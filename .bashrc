@@ -133,7 +133,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=~/.local/bin:/opt/go/bin:$PATH
+export GOPATH=~/go
+export GOROOT=/opt/go
+
+export PATH=~/.local/bin:$GOPATH/bin:$GOROOT/bin:$PATH
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
