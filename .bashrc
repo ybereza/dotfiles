@@ -138,6 +138,9 @@ export GOROOT=/opt/go
 
 export PATH=~/.local/bin:$GOPATH/bin:$GOROOT/bin:$PATH
 
+# llvm, clang
+export PATH=/opt/llvm/bin:$PATH
+
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
