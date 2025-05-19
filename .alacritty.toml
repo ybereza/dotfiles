@@ -3,7 +3,7 @@ decorations = "None"
 startup_mode = "Maximized"
 
 [font]
-size = 14
+size = 12
 
 [keyboard]
 bindings = [
