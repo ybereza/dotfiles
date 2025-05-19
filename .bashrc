@@ -136,7 +136,7 @@ fi
 export GOPATH=~/go
 export GOROOT=/opt/go
 
-export PATH=~/.local/bin:$GOPATH/bin:$GOROOT/bin:$PATH
+export PATH=~/.local/bin:$GOPATH/bin:$GOROOT/bin:$HOME/tools:$HOME/tools/android:$PATH
 
 # llvm, clang
 export PATH=/opt/llvm/bin:$PATH
